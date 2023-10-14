@@ -50,8 +50,10 @@ let changeWatched = (title) => {
 
     if(movie) {
         movie.haveWatched = !movie.haveWatched;
-        displayOutput("changing the status of the movie...");
     }
+    displayOutput("changing the status of the movie...");
+    displayOutput("----------------");
+
 }
 
 
