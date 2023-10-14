@@ -13,17 +13,19 @@ class Movie {
 //add a movie OBJECT to the allMovies array
 let addMovie = (movie) => {
     allMovies.push(movie);
-    console.log("A new movie is added");
+    let outputDiv = document.querySelector(".output");
+    outputDiv.innerHTML += "A new movie is added<br>";
 }
 
 //iterate through all elements of allMovies array
 //Display the total number of movies in allMovies array
 let printMovies = () => {
-    console.log(`Printing all movies....`);
+    let outputDiv = document.querySelector(".output");
+    outputDiv.innerHTML = "Printing all movies....<br>";
     allMovies.forEach(movie => {
-        console.log(`${movie.title}, rating of ${movie.rating}, havewatched: ${movie.haveWatched}`);
+        outputDiv.innerHTML += `${movie.title}, rating of ${movie.rating}, havewatched: ${movie.haveWatched}<br>`;
     });
-    console.log(`\nYou have ${allMovies.length} movies in total`);
+    outputDiv.innerHTML += `<br>You have ${allMovies.length} movies in total<br>`;
 }
 
 
@@ -31,22 +33,25 @@ let printMovies = () => {
 //Display the total number of matches
 let highRatings = (rating) => {
     let highRatedMovies = allMovies.filter(movie => movie.rating > rating);
-    console.log(`printing movie that has a rating higher than ${rating}:`);
+    let outputDiv = document.querySelector(".output");
+    outputDiv.innerHTML += `printing movie that has a rating higher than ${rating}:<br>`;
     highRatedMovies.forEach(movie => {
-        console.log(`${movie.title} has a rating of  ${movie.rating}`);
+        outputDiv.innerHTML += `${movie.title} has a rating of  ${movie.rating}<br>`;
     });
-    console.log(`In total, there are ${highRatedMovies.length} matches`);
-    console.log("----------------");
+    outputDiv.innerHTML += `In total, there are ${highRatedMovies.length} matches<br>`;
+    outputDiv.innerHTML = "----------------<br>";
 }
 
 
 //Toggle the 'haveWatched' property of the specified movie 
 let changeWatched = (title) => {
     let movie = allMovies.find(movie => movie.title === title);
+    let outputDiv = document.querySelector(".output");
+
     if(movie) {
         movie.haveWatched = !movie.haveWatched;
     }
-    console.log("changing the status of the movie...");
+    outputDiv.innerHTML = "changing the status of the movie...<br>";
 }
 
 
