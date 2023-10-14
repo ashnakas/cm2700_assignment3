@@ -65,36 +65,20 @@ let z = new Movie("Zootopia", 4.5, true);
 allMovies.push(x,y,z);
 
 /*replace console.log with display on web page*/
-console.log("----------------");
-console.log("running program......");
-console.log("----------------");
+let outputDiv = document.querySelector(".output");
+outputDiv.innerHTML += "----------------<br>";
+outputDiv.innerHTML += "running program......<br>";
+outputDiv.innerHTML += "----------------<br>";
 printMovies();
 
 
 let movie1 = new Movie("Parasite", 2, false);
-
-/*replace console.log with display on web page*/
-console.log("----------------");
 addMovie(movie1);
-console.log("----------------");
-
-
 
 changeWatched("Spiderman");
-/*replace console.log with display on web page*/
-console.log("----------------");
-
 printMovies();
-
-/*replace console.log with display on web page*/
-console.log("----------------");
 
 changeWatched("Spiderman");
-/*replace console.log with display on web page*/
-console.log("----------------");
-
 printMovies();
-/*replace console.log with display on web page*/
-console.log("----------------");
 
 highRatings(3.5);
