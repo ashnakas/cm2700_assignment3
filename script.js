@@ -13,20 +13,18 @@ class Movie {
 //add a movie OBJECT to the allMovies array
 let addMovie = (movie) => {
     allMovies.push(movie);
-    let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += '----------------<br>';
-    outputDiv.innerHTML += 'A new movie is added<br>';
+    displayOutput("----------------");
+    displayOutput("A new movie is added");
 }
 
 //iterate through all elements of allMovies array
 //Display the total number of movies in allMovies array
 let printMovies = () => {
-    let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += 'Printing all movies....<br>';
+    displayOutput("Printing all movies....");
     allMovies.forEach(movie => {
-        outputDiv.innerHTML += `${movie.title}, rating of ${movie.rating}, havewatched: ${movie.haveWatched}<br>`;
+        displayOutput(`${movie.title}, rating of ${movie.rating}, havewatched: ${movie.haveWatched}`);
     });
-    outputDiv.innerHTML += `<br>You have ${allMovies.length} movies in total<br>`;
+    displayOutput(`You have ${allMovies.length} movies in total`);
 }
 
 
@@ -34,13 +32,12 @@ let printMovies = () => {
 //Display the total number of matches
 let highRatings = (rating) => {
     let highRatedMovies = allMovies.filter(movie => movie.rating > rating);
-    let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += '----------------<br>';
-    outputDiv.innerHTML += `printing movie that has a rating higher than ${rating}:<br>`;
+    displayOutput("----------------");
+    displayOutput(`printing movie that has a rating higher than ${rating}:`);
     highRatedMovies.forEach(movie => {
-        outputDiv.innerHTML += `${movie.title} has a rating of  ${movie.rating}<br>`;
+        displayOutput(`${movie.title} has a rating of  ${movie.rating}`);
     });
-    outputDiv.innerHTML += `In total, there are ${highRatedMovies.length} matches<br>`;
+    displayOutput(`In total, there are ${highRatedMovies.length} matches`);
     //outputDiv.innerHTML += "----------------<br>";
 }
 
@@ -48,9 +45,8 @@ let highRatings = (rating) => {
 //Toggle the 'haveWatched' property of the specified movie 
 let changeWatched = (title) => {
     let movie = allMovies.find(movie => movie.title === title);
-    let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += '----------------<br>';
-    outputDiv.innerHTML += 'changing the status of the movie...<br>';
+    displayOutput("----------------");
+    displayOutput("changing the status of the movie...");
 
     if(movie) {
         movie.haveWatched = !movie.haveWatched;
@@ -68,10 +64,9 @@ let z = new Movie("Zootopia", 4.5, true);
 allMovies.push(x,y,z);
 
 /*replace console.log with display on web page*/
-let outputDiv = document.querySelector(".output");
-outputDiv.innerHTML += '----------------<br>';
-outputDiv.innerHTML += 'running program......<br>';
-outputDiv.innerHTML += '----------------<br>';
+displayOutput('----------------');
+displayOutput('running program......');
+displayOutput('----------------');
 printMovies();
 
 
