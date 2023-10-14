@@ -14,6 +14,7 @@ class Movie {
 let addMovie = (movie) => {
     allMovies.push(movie);
     let outputDiv = document.querySelector(".output");
+    outputDiv.innerHTML += "----------------<br>";
     outputDiv.innerHTML += "A new movie is added<br>";
 }
 
@@ -34,12 +35,13 @@ let printMovies = () => {
 let highRatings = (rating) => {
     let highRatedMovies = allMovies.filter(movie => movie.rating > rating);
     let outputDiv = document.querySelector(".output");
+    outputDiv.innerHTML += "----------------<br>";
     outputDiv.innerHTML += `printing movie that has a rating higher than ${rating}:<br>`;
     highRatedMovies.forEach(movie => {
         outputDiv.innerHTML += `${movie.title} has a rating of  ${movie.rating}<br>`;
     });
     outputDiv.innerHTML += `In total, there are ${highRatedMovies.length} matches<br>`;
-    outputDiv.innerHTML += "----------------<br>";
+    //outputDiv.innerHTML += "----------------<br>";
 }
 
 
@@ -47,6 +49,7 @@ let highRatings = (rating) => {
 let changeWatched = (title) => {
     let movie = allMovies.find(movie => movie.title === title);
     let outputDiv = document.querySelector(".output");
+    outputDiv.innerHTML += "----------------<br>";
     outputDiv.innerHTML = "changing the status of the movie...<br>";
 
     if(movie) {
