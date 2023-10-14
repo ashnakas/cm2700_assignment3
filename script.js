@@ -1,5 +1,5 @@
 function displayOutput(message) {
-    const outputDiv = document.querySelector('.output');
+    const outputDiv = document.getElementById('output');
     outputDiv.innerHTML += message + "<br>";
 }
 let allMovies = [];
