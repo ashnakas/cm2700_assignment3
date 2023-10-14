@@ -14,15 +14,15 @@ class Movie {
 let addMovie = (movie) => {
     allMovies.push(movie);
     let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += "----------------<br>";
-    outputDiv.innerHTML += "A new movie is added<br>";
+    outputDiv.innerHTML += '----------------<br>';
+    outputDiv.innerHTML += 'A new movie is added<br>';
 }
 
 //iterate through all elements of allMovies array
 //Display the total number of movies in allMovies array
 let printMovies = () => {
     let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += "Printing all movies....<br>";
+    outputDiv.innerHTML += 'Printing all movies....<br>';
     allMovies.forEach(movie => {
         outputDiv.innerHTML += `${movie.title}, rating of ${movie.rating}, havewatched: ${movie.haveWatched}<br>`;
     });
@@ -35,7 +35,7 @@ let printMovies = () => {
 let highRatings = (rating) => {
     let highRatedMovies = allMovies.filter(movie => movie.rating > rating);
     let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += "----------------<br>";
+    outputDiv.innerHTML += '----------------<br>';
     outputDiv.innerHTML += `printing movie that has a rating higher than ${rating}:<br>`;
     highRatedMovies.forEach(movie => {
         outputDiv.innerHTML += `${movie.title} has a rating of  ${movie.rating}<br>`;
@@ -49,8 +49,8 @@ let highRatings = (rating) => {
 let changeWatched = (title) => {
     let movie = allMovies.find(movie => movie.title === title);
     let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML += "----------------<br>";
-    outputDiv.innerHTML = "changing the status of the movie...<br>";
+    outputDiv.innerHTML += '----------------<br>';
+    outputDiv.innerHTML += 'changing the status of the movie...<br>';
 
     if(movie) {
         movie.haveWatched = !movie.haveWatched;
@@ -69,9 +69,9 @@ allMovies.push(x,y,z);
 
 /*replace console.log with display on web page*/
 let outputDiv = document.querySelector(".output");
-outputDiv.innerHTML += "----------------<br>";
-outputDiv.innerHTML += "running program......<br>";
-outputDiv.innerHTML += "----------------<br>";
+outputDiv.innerHTML += '----------------<br>';
+outputDiv.innerHTML += 'running program......<br>';
+outputDiv.innerHTML += '----------------<br>';
 printMovies();
 
 
