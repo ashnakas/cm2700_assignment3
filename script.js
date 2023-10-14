@@ -21,7 +21,7 @@ let addMovie = (movie) => {
 //Display the total number of movies in allMovies array
 let printMovies = () => {
     let outputDiv = document.querySelector(".output");
-    outputDiv.innerHTML = "Printing all movies....<br>";
+    outputDiv.innerHTML += "Printing all movies....<br>";
     allMovies.forEach(movie => {
         outputDiv.innerHTML += `${movie.title}, rating of ${movie.rating}, havewatched: ${movie.haveWatched}<br>`;
     });
@@ -39,7 +39,7 @@ let highRatings = (rating) => {
         outputDiv.innerHTML += `${movie.title} has a rating of  ${movie.rating}<br>`;
     });
     outputDiv.innerHTML += `In total, there are ${highRatedMovies.length} matches<br>`;
-    outputDiv.innerHTML = "----------------<br>";
+    outputDiv.innerHTML += "----------------<br>";
 }
 
 
@@ -47,11 +47,11 @@ let highRatings = (rating) => {
 let changeWatched = (title) => {
     let movie = allMovies.find(movie => movie.title === title);
     let outputDiv = document.querySelector(".output");
+    outputDiv.innerHTML = "changing the status of the movie...<br>";
 
     if(movie) {
         movie.haveWatched = !movie.haveWatched;
     }
-    outputDiv.innerHTML = "changing the status of the movie...<br>";
 }
 
 
