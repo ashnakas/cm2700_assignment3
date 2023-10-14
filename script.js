@@ -1,3 +1,7 @@
+function displayOutput(message) {
+    const outputDiv = document.querySelector('.output');
+    outputDiv.innerHTML += message + "<br>";
+}
 let allMovies = [];
 
 //Define a movie class with parameters title (string), rating (number) and haveWatched (boolean)
