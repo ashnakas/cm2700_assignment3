@@ -1,25 +1,41 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Dancing Script', cursive; /* Cute font */
+    background-color: #ffebef; /* Light pink background */
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 700px;
+    max-width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #fff1f2; /* Lighter pink for the container */
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(255,192,203,0.3); /* Pinkish shadow */
+    border-radius: 10px;
 }
 
 header, footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #ff6b81; /* Slightly bold pink for header and footer */
+    color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    border-radius: 10px;
 }
 
 .output {
     margin-top: 20px;
+    background-color: #ffdae0; /* Slightly bold pink for the output background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(255,192,203,0.3); /* Inset pinkish shadow for depth */
+}
+
+h1 {
+    font-weight: 500; /* Slightly bolder version of Dancing Script */
+    color: #ff6b81; /* Same as header/footer background */
+}
+
+p {
+    color: #ff88a1; /* Pinkish text color */
 }
